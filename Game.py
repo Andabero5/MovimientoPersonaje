@@ -53,9 +53,9 @@ def create_sprites():
 def main():
     pygame.init()
     screen = pygame.display.set_mode(SIZE)
-    pygame.display.set_caption("Patrons")
+    pygame.display.set_caption("Knigth")
     iddle, walk, jump = create_sprites()
-    my_group = walk
+    my_group = iddle
     clock = pygame.time.Clock()
     loop = True
     while loop:
@@ -70,7 +70,7 @@ def main():
                 if event.key == pygame.K_s or event.key == pygame.K_DOWN:
                     my_group = iddle
         my_group.update()
-        screen.fill((0, 0, 0))
+        screen.fill((209, 209, 209))
         my_group.draw(screen)
         pygame.display.update()
         clock.tick(FPS)

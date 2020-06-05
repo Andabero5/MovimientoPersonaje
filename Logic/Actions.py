@@ -1,13 +1,23 @@
-#ABSTRACT FACTORY
+# ABSTRACT FACTORY
 class Actions():
+    '''
+    clase abstracta que crea las acciones 
+    '''
+
     def createJumpAction(self): pass
 
     def createWalkAction(self): pass
 
     def createIddleAction(self): pass
-    
-#GOLDEN KNIGHT FACTORY
+
+# GOLDEN KNIGHT FACTORY
+
+
 class GKFactory(Actions):
+    '''
+    Concrete factory de golden knight donde se setean las acciones
+    '''
+
     def createIddleAction(self):
         super().createIddleAction()
         return "GKImages/iddle*.png"
@@ -21,8 +31,12 @@ class GKFactory(Actions):
         return "GKImages/jump*.png"
 
 
-#BLACK KNIGHT FACTORY
+# BLACK KNIGHT FACTORY
 class BKFactory(Actions):
+    '''
+    Concrete factory de black knight donde se setean las acciones
+    '''
+
     def createIddleAction(self):
         super().createIddleAction()
         return "BKImages/iddle*.png"
@@ -34,5 +48,3 @@ class BKFactory(Actions):
     def createJumpAction(self):
         super().createJumpAction()
         return "BKImages/jump*.png"
-
-        

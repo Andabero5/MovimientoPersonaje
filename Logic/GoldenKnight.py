@@ -4,6 +4,11 @@ from Logic.Actions import *
 
 
 class GoldenKnight(Knight):
+
+    '''
+    Concrete Factory Golden Knight
+    '''
+
     def iddle(self):
         super().iddle()
         i = GKFactory()
@@ -18,6 +23,3 @@ class GoldenKnight(Knight):
         super().jump()
         j = GKFactory()
         return j.createJumpAction()
-
-    def set_sprites(self, images):
-        return super().set_sprites(images)

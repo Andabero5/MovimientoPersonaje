@@ -5,6 +5,9 @@ from Game import *
 
 class Director:
 
+    '''
+    Implementa el constructor y retorna el producto
+    '''
     __builder = None
 
     def setBuilder(self, builder):
@@ -21,6 +24,10 @@ class Constructor():
 
 
 class ConstructorBK():
+    '''
+    Construir los personajes a partir de las fabrica BK
+    '''
+
     def __init__(self):
         self.factory = BKFactory()
 
@@ -32,6 +39,10 @@ class ConstructorBK():
 
 
 class ConstructorGK():
+    '''
+    Construir los personajes a partir de las fabrica BK
+    '''
+
     def __init__(self):
         self.factory = GKFactory()
 

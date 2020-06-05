@@ -1,6 +1,9 @@
 
-class Knight():    
-   
+class Knight():
+    '''
+    clase abstracta que define las acciones 
+    '''
+
     def iddle(self):
         pass
 
@@ -8,7 +11,4 @@ class Knight():
         pass
 
     def jump(self):
-        pass
-
-    def set_sprites(self, images):
         pass
