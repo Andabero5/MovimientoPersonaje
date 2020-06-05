@@ -3,12 +3,11 @@ from Logic.Knight import *
 from Game import *
 
 
-class Director:
+class Director():
 
     '''
     Implementa el constructor y retorna el producto
     '''
-    __builder = None
 
     def setBuilder(self, builder):
         self.__builder = builder
