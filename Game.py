@@ -32,7 +32,7 @@ def create_sprites():
     director = Director()
     while True:
         opc = int(input(
-            "Seleccione el guerrero a su preferencia\n1. para el caballero negro\n2. para el caballero dorado\n"))
+            "Seleccione el guerrero a su preferencia\n1. para el caballero negro\n2. para el caballero dorado\n3. Zombie\n"))
         if opc == 1:
             director.setBuilder(ConstructorBK())
             iddle = pygame.sprite.Group(director.getknight(0))
@@ -44,6 +44,13 @@ def create_sprites():
             iddle = pygame.sprite.Group(director.getknight(0))
             walk = pygame.sprite.Group(director.getknight(1))
             jump = pygame.sprite.Group(director.getknight(2))
+            break
+        elif opc == 3:
+            director.setBuilder(ConstructorZM())
+            iddle = pygame.sprite.Group(director.getknight(1))
+            walk = pygame.sprite.Group(director.getknight(0))
+            jump = pygame.sprite.Group(director.getknight(0))
+
             break
         else:
             print("Por favor ingrese una opción correcta")
