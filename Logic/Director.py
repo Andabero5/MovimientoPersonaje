@@ -1,7 +1,6 @@
 # Class Director implementa la clase abstracta
 from Logic.Knight import *
 from Game import *
-from Logic.Adapter import *
 from Personaje_master.constuctores import *
 
 
@@ -54,11 +53,3 @@ class ConstructorGK():
         return[self.factory.createIddleAction(),
                self.factory.createWalkAction(),
                self.factory.createJumpAction()]
-
-
-class ConstructorZM():
-    def __init__(self):
-        self.factory = ConstructorZombis()
-
-    def get_sprites(self):
-        return self.factory.get_sprites()
